@@ -48,3 +48,4 @@ class Agent:
         """
         target = reward + self.gamma*np.max(self.Q[next_state])
         self.Q[state][action] = self.Q[state][action] + self.alpha*(target - self.Q[state][action])
+        return self.Q[state][action]
